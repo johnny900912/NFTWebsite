@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #c121e9;
+    --dark-color: #312d2d;
+    --light-color: #706868;
+    --text-color: hsl(0, 0%, 80%);
+}
+
+body {
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #D3A4FF, #312d2d);
+}
+
+.about-section {
+    float: left;
+    background-size: 80% !important;
+    background: url("../_Images/about.jpg") no-repeat left;
+    overflow: hidden;
+    padding: 100px 0;
+    background-position: -150px;
+}
+
+.inner-container {
+    width: 40%;
+    float: right;
+    background-color: #ee82ee;
+    padding: 150px;
+}
+
+.inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 900;
+    font-weight: bolder;
+}
+
+.text {
+    font-size: 20px;
+    color: #f4ecec;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #dd24ea;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+a.active,
+a:hover {
+    background: var(--main-color);
+    transition: .5s;
+    border-radius: 00.5rem;
+}
+
+
+
+/* our team */
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+}
+.card img{
+    border-radius: 1.5rem;
+    width: 100px;
+}
+
+
+
+.container {
+    padding: 26px;
+    position: relative;
+}
+
+
+
+.container::after,
+.row::after {
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: rgb(228, 246, 36);
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: rgb(236, 230, 230);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(45deg,#D3A4FF,#312d2d);
+    min-height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+	margin-top: 1150px;
+}
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+.menu li{
+    list-style: none;
+}
+.menu li a{
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.5;
+}
+.menu li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}

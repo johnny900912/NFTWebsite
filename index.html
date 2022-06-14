@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icon/NFT ICON.ico"type="image/x-icon"/>
+    <!----CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!----圖標-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- 外掛 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>首頁</title>
+    <script>
+        $(document).ready(function(){
+          $("#btn").click(function(){
+    // $(".container").fadeTo('slow',0);
+    $(".container2").fadeTo('fast',1);
+    $(".container2").css("z-index", 10);
+    // $(".container-one").css("opacity",0)
+    $(".container-one").fadeTo('fast',0);
+        });
+        $(".feed").click(function(){
+        //   $(".container-one").fadeTo('slow',0);
+          $(".container2").fadeTo('fast',0);
+          $(".container3").css('opacity',1);
+          $(".container3").delay(3000).fadeTo('slow',0);
+          $(".container2").css("z-index",1);
+          $(".container-one").delay(5000).fadeTo('normal',1);
+        });
+        });
+      </script>
+</head>
+<body>
+    <nav>
+        <label class="logo">Sha<span>Bi</span></label>
+        <ul>
+            <li><a class="active" href="#">首頁</a></li>
+            <li><a href="NFTInfo.html">商品</a></li>
+            <li><a href="leaderBoard.html">排行榜</a></li>
+            <li><a href="Cart.html">購買專區</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="login.html?#">登入</a></li>
+        </ul>
+    </nav>
+    
+    <!----主頁設計--->
+    <div>
+    <iframe marginwidth=0 marginheight=0 width="100%" height=800px src="aside.html" frameborder="no"
+        scrolling="no"></iframe>
+    <section class="home container" id="home">
+        <img src="_Images/Home.jpg" alt="">
+        <div class="home-text">
+            <h1>未來的趨勢<br>NFT</h1>
+            <a href="NFTInfo.html" class="btn">立即享受</a>
+        </div>
+    </section>
+    <div class="table">
+        <!------NFT總數-->
+        <div class="table-container">
+            <img src="_Images\NFT_Icon.png" alt="" class="icon_nft">
+            <div class="counter" data-target="80300"></div>
+            <span>目前總共的NFT收藏品</span>
+        </div>
+        <!-----擁有NFT的人數-->
+        <div class="table-container">
+            <img src="_Images\People.png" alt="" class="icon_nft">
+            <div class="counter" data-target="360000"></div>
+            <span>持有NFT的人數</span>
+        </div>
+    </div>
+    <!------最大成本-->
+    <div class="table2">
+        <div class="money-container">
+            <img src="_Images\Top.png" alt="" class="icon_nft">
+            <div class="counter" data-target="100000"></div>
+            <span>最高成交價</span>
+        </div>
+        <div class="money-container">
+            <img src="_Images\Down.png" alt="" class="icon_nft">
+            <div class="counter" data-target="10"></div>
+            <span>最低成交價</span>
+        </div>
+    </div>
+    <section class="NFT-List container" id="NFT">
+        <div class="heading">
+            <i class="bx bxs-flame"></i>
+            <h2>熱門NFT</h2>
+        </div>
+        <div class="NFT-content swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/goblintown-1.jpg" alt="">
+                        <div class="box-text">
+                            <h2>GoblinTown</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide2-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/MetaLegend.png" alt="">
+                        <div class="box-text">
+                            <h2>MetaLegend</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide3-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/doodles.png" alt="">
+                        <div class="box-text">
+                            <h2>Doodles</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide4-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/Pessi-Mic-Drop.png" alt="">
+                        <div class="box-text">
+                            <h2>Pepsi</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide5-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/Shabi.jpg" alt="">
+                        <div class="box-text">
+                            <h2>Shabi</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide6-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/punk.jpg" alt="">
+                        <div class="box-text">
+                            <h2>CryptoPunk</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide7-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/CloneX.jpg" alt="">
+                        <div class="box-text">
+                            <h2>CloneX</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide8-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/CoolCat.png" alt="">
+                        <div class="box-text">
+                            <h2>CoolCat</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide9-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/OnchainMonkey.png" alt="">
+                        <div class="box-text">
+                            <h2>On Chain Monkey</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----slide10-->
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="_Images/Ape.jpg" alt="">
+                        <div class="box-text">
+                            <h2>Bored Yacht Club Apes</h2>
+                            <h3>趨勢</h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----aside--->
+        
+<!-- 廣告 -->
+<div class="container3">
+    <div class="ad-tit">
+      <h1>我們會盡量不再顯示該則廣告</h1>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="ad-tit">
+      <h1>ShaBi提供的廣告</h1>
+      <div class="btnbtn"><button class="feed">不再顯示這則廣告</button>
+        <a href="https://adssettings.google.com/whythisad"><button class="info">為什麼會顯示這則廣告</button></a>
+      </div>
+    </div>
+  </div>
+    <div class="container-one">
+      <button id="btn1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="1 2 120 115">
+          <image id="圖層_2" data-name="圖層 2" x="0" y="0" width="25" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAYAAABwWUfkAAAMz0lEQVR4nO2db4gU9xnHP9lEBcW8OLFJ1fqPO2gFTTWlIZikJUcaPLFBMChii8W+iJiQgkIglOYPaUrAvEiJ1Rc9atsgBoVgjpxIudAabUhplESwf87qGdSkiEK1SVEhLWO+e13H55md3Z2dnbn7feDe3OzuzPy+OzvfeX7P73lu4dw5xgBzgW5gPjAbmAXcCUwHuoDbgcnAxNipXgU+Ay4BF4HzwCfAGeAj4CRwAhgp+xCVUeipwN3AEuAuYCGwAJjUpv1dAY4Dx4APgCPA+8DlNu2vLZRF6OhqvR9YCtwrYTtJJPy7wGHgHV31habIQs8AHgJ6gQeBmQU4JouzwNvAEPA7oJADWkSh7wOWA33AogIcTyN8CAwCbwGHinRgRRJ6BbASeEQGqhlG9DN6UmbqjMzVeZmtSzJfyJzdrn1Nl3mbJTM3X7eLuU0eR7SvfcAbwEA2w9MaRRA6Eng18KjhipO4LFN0RCbpmO6dVzI6rknyAgtl+pbIBE5t4DMiV78HeL3TgndS6AeAdcBaYErK95yQ+TksM3S8zccYZ4HM4FKZw+6U7/sU2AW8BhzM73D/TyeEjn4O1+tvTorXn5PJGZLpOZvDMaZhpkxir0zjjBTvOQ3s1F+uz+Z5C70G+KEGpx6HZGoGZXKKzCKZx+Uyk/WIvrS/BHbndU55CT0P2Ag8luIeNyATs0+mpkx0yUyulPdIIvIYO4DtwKl2n2MeQi8DHtc3PokBmZY9MjFlZqLM5eoUgke/WK8C+9t5vu0WehPwJNCT8JqDMim7ZFrGElNkNtfJfHoMA68A29p17u0SehqwGdgCTHBeM1JjTE634yAKxJwaA+o9m18DtgIvAxeyPvR2CB1dvU8BGxJes1tmZCjrnTs8DHwb+CbwVeAO4J/AX4E/Ab8HDuRwHL0yo2sSXtMPvKSrPDOyFnox8DSwytl+SuZjR06zP98CfgB8D6gkvO5z4LfAr4A/tPmYpsqUbpRJtdgLvAgczWqnt7J5c1afdQ/wnFynRWQ2ngV+nZPZWqvB+s71L3Qy0favK/L1L0XZ2kV07n/UFdvl+JcoMPMV4B9ZxQ2yEroq8jJn+zaJ/F4WO0vBd4GfAV9r8H13KNwZeYa/tfkYh3XbqOiWEqdHYg9nIXYWQldFftjYFpmKF4BnNLGQB18GfuoMXhq69Bf5h3+3+XgvKur3H/2iTI5t785K7FaFXpxwJQ/rKv657oF5Ef1k/6jFfUUD/HdNmrSbzxUFvKBfoGnGsUTh1b9oJq4pkgxKPXpkvKxAyFFt689J3FrShFfz/Jy09GvMLAPWp21J8YhEmhV6mh6hLHcdHeiP5Rw7wTcy2mdWn9MIezV2ltirNObxKz4VzQq92XlOHpbTHczktJtjdsE+p1EGNYbWc/QGjX3DNCP0JkW84lzQg36nruQqHxXsc5phr8bSipBtkQYN0ajQyxS7tsKaL3fonhznzwX7nGbp15jGmSANvEdZk0aEnqdZKMsQbFOctghkFVbNKzybxFZnoqNHWniRtZtoROiNjsPer5mXa02fTrYMZBC3PlCQpL5rGltrCrNPmqQirdBrFJ+Nc0pzqZkG4FvkY+AXLSTVn9D7Py7I+QxrjK3khMfqTJCMkkbouZpxsTJDtnfYYXu8qWhcozHrY3rfm/kdaioGNdZxpkqbumnJaYRe7wQhdmsWqqhEiQxPaBKlXmTuc73uCb2viOxwcsx6pVEi9aYpo6yI3xjZmiP6JhXBsKShKPPRrdKrefz4FRxNwnw/KZX4tjo7Xuek5O4skcgRB0oiZD2GNPbPxl43R1q5Qif9dK/QBEGcg9pZoDPsdARdm5SImCT0amcFxWvjIMeryJyWBnGmSDMTT+gVSleNM1BgszKe2OU85z/qXdWe0CudBW+vj8GU3DLyqbSIM1Ha3YQl9H1O3teAkusDxWCPc1U/Yi0LsoRe7qxPfmMMrKAYS1yVJnG6pOENxIWe4cSzD2ktVKBY7HMqK/TFV3fGhX7IKSfxVgkXvI0HLkqbOIuk5Shxoa1Q57mCxrMDXzDoFMi5Qctaobu1sDvO70qwPnk886E0ivNgbUWGWqHvd0o8lSnUOV6xNJopTa9TK/RS48UnVE4iUGzedubfRzWtCj1VRVjivFOgmiGN8N8W/8rGWWkV595qHkFV6LudsouHS3jS4xVLqwXSdlToJcaLLqvEU6AcvOssRV5SK/Rdxgve70Adr0DzHHfWil3Xtir0QuMFR8Kglw5Ls+vaVpSWYt2fPxjvo1ZCLM0ibedW9FBtFTVv56r/QHuwNIu07a6okm2ckXB/LiXHndKT8yvO6sMTGVbJDeTHFSdwMruiGtVxTgZxSoul3ayKCpLH6eSS0UBrWNrdWVH1+ThnwmCXFku76RUnbajpoiiBjmNp11VRX4k4eZWKCmSPpd3tFaO2FSFtqNRY2k2uOPnbl8b7aJUYS7uJXgL/Z87/A8XH1K6VgnKBEuEJbd23A+XA1K7irL6wnHigHFjaXa04v+nNtgwMdB5Lu88qjkuzomWBcmBpd6niPHdZ8e9AObC0u1hxIinWjFagHFjana84sdFOVbYNtI6l3ScVZ7bDyjoJlANLuzMVZ/7SyyMLFJtJTqvjjypORoKXGRooNguccpEnKwn5YVaud6DYWJpdzyOrJGR8Wqs3AsXG0ux6Zmg11m3lA1vrsQLFxtLsurZVoa0Mf2+FZaCYjK6cjPFBrdDWmh1vzXSgmNzr1FQ/Uiu0t3LSqoIQKCaWVqMrLKtCe2uhvbomgWJxQ72SGkbXTNcmHlgr5r1KRYFi8aATKBnVtFZor15J3j0aA41jaXRDXZNaob0KRF41wUAxuKlKoLihUlE8Z8yqV+XVBw0Ug5vqflpaxoX2qgR6FX8DncWs5GtVE4wL7dX99Gp4BzqLWZvbqg9qpft6lXy9qvyBzuBV2zcr/lpCe7W5vT4bgc7g9c8wa3h7CfxetX2vc04gX7yOOF5Vfldor3+G1wsrkC9ejyuvz0bi2iuvI47X3S6QD9WudXG8zjl1hfZ6XD2QpulloG2slwZxvF5YdYUmoWud14E20F68zrJed7vUQnt9KJN6SgfaQ1KvaK9fZWqhSegs63WJD7QHr/v7UJqmsGmEHlHPYqsW9MYQB8+FPo11nMvSxioLeQNpKx543d/nAY8DPYUcnrFBj8Z4nnE2Xpf4m2iktMV2Jw6+DHgSmDBOBj5PJmhslxn7HJQmqWhE6FPAq8CwsW0TsKXQQ1ZOtmhs4wxLi1Npz6rRYjX7gVeAa8a2zcCGsTXOHWWDxjTONWmwv5GDa6Yq0TZgq/H/acBTwKpCDVc5WaWxnGYc/VZp0BDNlp96Geg3/h8Zh6eDE2+JPo2hZXD7NfYN06zQF4CXgL3GtsXAC+HKbopVGrvFxpv3aswvNPPBrRSUiwzBi44TX6xt4Z6dng0aM0vkQW2zjHAqbmvx4I4CzwO3Ag/HtvXoG/gl3VcsAxf44hFqi4yXdU8+oDE+2spY3cI5q/Vww9wDPGeIXWWbnGLT38gGabW/5C05HWePnpOtRygk8jPAe63uKCuhkdg/STBi+/XsF5qOf0GfIl5WMASN0/NZiEzGQqP7y9MJRuyUojk7nNj5eGCqJig2OmFNZLxebPXnupashUY/R0/VMWK7FYwfb03IezXVaM1CVemXt8n0NtcOoZGp2CyT4cXARzS9ttNJbhhLzFHCwHpnPhmZ1a16Tm7qESqJdgldZZPMRtLs1kFlR+xyctTKzBQl8q1z0n+qDMusNhzxSku7hUZm4/EU0bIBJbftcVKNy8RE5V2vdrI1axmUSW0odt0oeQiNTMdGmZB66UcDyk3eV8ImLl1aJrMyhcCXZUq3NzIL1Sx5CV1ljcxImsTCQ1paMugs/CsSi/SLtdxZCxVnSGY0VdJAFuQtNDIjVWOSJj/8nFYGDmnNr7VYvxPMVKWBXq1PtpauxjldY0Drpv9kSSeErvKATMraBpb5nNAq/sOqz5F36+MFqv6zVDVDrHISFp/KbL5WL1uzXXRS6CorZFoebXC15mVV3DmiWlrHJHxW7ZAnSdiFqsi3RHW8Gklxvipz+XpScn0eFEHoKitkYh5pYdH9iK76k6pafEb1yM/L2F2q6SEyWY1GutSe4E4VNZ+tUsjdCc+89bgoM/lGpwWuUiShq9wnU9NXwtopH8o8vmUtXe0kRRS6ygyZnF6ZnqLWOzsrkzgk01jIAS2y0LV0y/wslRnqdI3S4zKDh2UOrXb7haIsQtcyVaZoiUzSQgnfro4BVyTsMZm+IzKBpZp9K6PQFnN11c+XmZolczVdZisyXZH5irv6yBVH5iwyaZGBikxbZN4iExeZucjURVdrrs+8mQP8D5KR22PF2vwNAAAAAElFTkSuQmCC"/>
+        </svg>
+      </button>
+      <button id="btn">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="9"
+     viewBox="15 60 100 100" overflow="visible" enable-background="new 0 0 100 100" xml:space="preserve">
+    <path stroke="#00e6e6" stroke-width="12" stroke-linecap="square" d="M 10,10 90,90 M 10,90 90,10"/>
+</svg>
+      </button>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="http://www.infocom.yzu.edu.tw/images/promo/2022GTn.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="_Images/isee.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
+    </section>
+    </div>
+    <!-----footer-->
+    <footer>
+
+        <ul class="menu">
+            <li><a href="#">首頁</a></li>
+            <li><a href="NFTInfo.html">商品</a></li>
+            <li><a href="leaderBoard.html">排行榜</a></li>
+            <li><a href="Cart.html">購買專區</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="login.html">登入</a></li>
+        </ul>
+        <p>@2022 Online Website | All Rights Reserved</p>
+    </footer>
+
+    <!------各種JS------->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/aside.js"></script>
+    <script src="js/ContentControlScript.js"></script>
+    <script src="js/NFTInfo.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

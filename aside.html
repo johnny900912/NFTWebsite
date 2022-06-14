@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>A Slide In Dashboard</title>
+	<link href="css/aside.css" rel="stylesheet">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#dashboard').hover(function () {
+				$(this).stop().animate({
+					left: '0px',
+					backgroundColor: '#CA8EFF'
+					//background-color
+				}, 1000, 'easeInSine');
+			}, function () {
+				$(this).stop().animate({
+					left: '-170px',
+					backgroundColor: '#4B0091'
+					//background-color
+				}, 1000, 'easeOutSine', function () {
+					$('.main').effect('slide', { direction: 'up' }, 400);
+				});
+			});
+
+
+		}); // end ready
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="dashboard">
+
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/CoolCat.png" />
+					<div class="NFT_text">酷酷貓</div>
+					<div class="NFT_price">$80000</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Ape.jpg" />
+					<div class="NFT_text">無聊猿</div>
+					<div class="NFT_price">$40000</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Sugar Glide.jpg" />
+					<div class="NFT_text">Sugar Glide</div>
+					<div class="NFT_price">$5566</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Get Physical .jpg" />
+					<div class="NFT_text">Get Physical</div>
+					<div class="NFT_price">$1092039</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/punk1.png" />
+					<div class="NFT_text">數位龐克</div>
+					<div class="NFT_price">$1092047</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Shabi.jpg" />
+					<div class="NFT_text">傻幣</div>
+					<div class="NFT_price">$1092052</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Something 2.jpg" />
+					<div class="NFT_text">Something</div>
+					<div class="NFT_price">$1092048</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/WVRP.jpg" />
+					<div class="NFT_text">WVRP</div>
+					<div class="NFT_price">$555</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Streets of Orleans 3.jpg" />
+					<div class="NFT_text">Streets of Orleans</div>
+					<div class="NFT_price">$88888</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Pessi-Mic-Drop.png" />
+					<div class="NFT_text">百事可樂麥克風</div>
+					<div class="NFT_price">$1</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/OnchainMonkey.png" />
+					<div class="NFT_text">OCM</div>
+					<div class="NFT_price">$941</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Obsession2.jpg" />
+					<div class="NFT_text">Obession</div>
+					<div class="NFT_price">$0</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/MetaLegend.png" />
+					<div class="NFT_text">MetaLegend</div>
+					<div class="NFT_price">$200</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/goblintown-1.jpg" />
+					<div class="NFT_text">哥布林小鎮</div>
+					<div class="NFT_price">$4444</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Depth of Field2.jpg" />
+					<div class="NFT_text">Depth of Field</div>
+					<div class="NFT_price">$7777777</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/doodles.png" />
+					<div class="NFT_text">Doodles</div>
+					<div class="NFT_price">$555</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/CloneX2.jpg" />
+					<div class="NFT_text">CloneX</div>
+					<div class="NFT_price">$6666</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+			<div id="NFT_win">
+				<div class="NFT_item">
+					<img class="NFT_img" src="_Images/Down South 7-2.jpg" />
+					<div class="NFT_text">Down South</div>
+					<div class="NFT_price">$77777</div>
+					<!-- <div class="NFT_cart"><img src="/WebFinal/_Images/cart.svg"></div> -->
+				</div>
+			</div>
+</body>
+
+</html>

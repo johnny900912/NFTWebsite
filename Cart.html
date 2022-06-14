@@ -1,0 +1,259 @@
+<html>
+
+<head>
+    <title>購買專區</title>
+    <link rel="icon" href="/icon/NFT ICON.ico"type="image/x-icon"/>
+
+    <link href="css/cart.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/Cartjs.css">
+    <script>
+        $(document).ready(function () {
+            var serial = 0;
+            var buy_array = [];
+            $(".NFT_cart").click(function () {
+                serial++;
+                var item_object = {
+                    text: "",
+                    price: "",
+                    src: "",
+                    no: serial
+                }
+                var $p = $(this).parent();
+                item_object.text = $p.find(".NFT_text").text();
+                item_object.price = $p.find(".NFT_price").text();
+                item_object.src = $p.find(".NFT_img").attr("src");
+
+                //Add item to chart array
+                buy_array.push(item_object);
+                //Update chart's item number
+                $("#item_num").text(buy_array.length);
+
+                var newItem = $('<div class="cart_item">' +
+                    '<img class="cart_img" src="./images/162961.jpg" />' +
+                    '<div class="cart_text">超美麗。超漂亮。</div>' +
+                    '<div class="cart_price">$18000</div>' +
+                    '<div class="cart_delete">X</div>' +
+                    '</div>'
+                );
+                newItem.find(".cart_img").attr('src', item_object.src);
+                newItem.find(".cart_text").text(item_object.text);
+                newItem.find(".cart_price").text(item_object.price);
+                newItem.attr("no", item_object.no);
+
+                newItem.find(".cart_delete").click(function () {
+                    newItem.remove();
+
+                    var n = newItem.attr("no");
+                    for (var i = 0; i < buy_array.length; i++) {
+                        if (n == buy_array[i].no) {
+                            buy_array.splice(i, 1);
+
+                            //Refresh chart's item number
+                            $("#item_num").text(buy_array.length);
+                            break;
+                        }
+                    }
+                    console.log(buy_array);
+                });
+                $("#cart_win").append(newItem);
+            });
+            //End of $(".NFT_cart").click(function(){
+
+            $("#item_num, #banner img").click(function () {
+                $("#cart_win").show();
+            });
+            $("#closecart").click(function () {
+                $("#cart_win").hide();
+            });
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">Sha<span>Bi</span></label>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="NFTInfo.html">商品</a></li>
+            <li><a href="leaderBoard.html">排行榜</a></li>
+            <li><a class="active" href="Cart.html">購買專區</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="login.html?#">登入</a></li>
+        </ul>
+    </nav>
+    <div id="banner">
+        <div id="item_num">0</div>
+        <img src="_Images/cart.svg" />
+    </div>
+    <div id="NFT_win">
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/CoolCat.png" />
+            <div class="NFT_text">酷酷貓</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$80000</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Ape.jpg" />
+            <div class="NFT_text">無聊猿</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$40000</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Sugar Glide.jpg" />
+            <div class="NFT_text">Sugar Glide</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$5566</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Get Physical .jpg" />
+            <div class="NFT_text">Get Physical</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$1092039</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/punk1.png" />
+            <div class="NFT_text">數位龐克</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$1092047</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Shabi.jpg" />
+            <div class="NFT_text">傻幣</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$1092052</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Something 2.jpg" />
+            <div class="NFT_text">Something</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$1092048</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/WVRP.jpg" />
+            <div class="NFT_text">WVRP</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$555</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Streets of Orleans 3.jpg" />
+            <div class="NFT_text">Streets of Orleans</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$88888</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Pessi-Mic-Drop.png" />
+            <div class="NFT_text">百事可樂麥克風</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$1</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/OnchainMonkey.png" />
+            <div class="NFT_text">OCM</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$941</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Obsession2.jpg" />
+            <div class="NFT_text">Obession</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$0</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/MetaLegend.png" />
+            <div class="NFT_text">MetaLegend</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$200</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/goblintown-1.jpg" />
+            <div class="NFT_text">哥布林小鎮</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$4444</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Depth of Field2.jpg" />
+            <div class="NFT_text">Depth of Field</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$7777777</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/doodles.png" />
+            <div class="NFT_text">Doodles</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$555</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/CloneX2.jpg" />
+            <div class="NFT_text">CloneX</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$6666</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+        <div class="NFT_item">
+            <img class="NFT_img" src="_Images/Down South 7-2.jpg" />
+            <div class="NFT_text">Down South</div>
+            <div class="NFT_price"><img src="_Images/1.svg">$77777</div>
+            <div class="NFT_cart"><img src="_Images/cart.svg"></div>
+            <div> <button class="NFT_into shopcart">商品介紹</button></div>
+        </div>
+    </div>
+    <div id="cart_win">
+        <div id="closecart">
+            <p>x</p>
+        </div>
+    </div>
+
+
+    <div id="NFTContent">
+        <div id="close">
+            <p>X</p>
+        </div>
+        <div id="poster">
+            <img src="">
+        </div>
+        <div id="textArea">
+            <div class="chineseName">
+                <p>中文名</p>
+            </div>
+            <div class="englishName">
+                <p>englishName</p>
+            </div>
+            <div class="releaseDate">
+                <p>上架日期：<span>date</span></p>
+            </div>
+            <div class="category">
+                <p>類型：<span>category</span></p>
+            </div>
+            <div class="description">
+                <h2>簡介</h2>
+                <div id="desc"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="list"></div> -->
+    <script src="js/Cart.js"></script>
+    <script src="js/NFTInfo.js"></script>
+   
+</body>
+
+</html>

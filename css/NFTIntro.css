@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --main-color:#c121e9;
+    --dark-color:#312d2d;
+    --light-color:#706868;
+    --text-color:hsl(0,0%,80%);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 20px; 
+    width: 100;
+}
+
+body{
+    color:var(--text-color);
+    background:linear-gradient(45deg,#D3A4FF,#312d2d);
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: var(--dark-color);
+    z-index: 100;
+}
+a{
+     text-decoration: none;
+}
+
+img{
+    width: 100;
+}
+
+.main-color{
+    color: var(--main-color);
+}
+.container{
+    max-width: 1080px;
+    margin: auto;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.nav a{
+    color: var(--text-color); 
+}
+label.logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+.logo span{
+    color: #dd24ea;
+}
+
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+nav ul li a{
+    color:var(--text-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+a.active,a:hover{
+    background: var(--main-color);
+    transition: .5s;
+}
+
+/*NFT介紹*/
+/* 關閉 Scrollbar */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Page name */
+.title {
+    text-align: left;
+    padding-left: 5%;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0 5px 0;
+}
+
+/* Category Filter setting */
+#categorySelect {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-bottom: 30px;
+    border-radius: 0.5rem;
+}
+
+#categorySelect > p {
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 80%;
+    color:var(--text-color);
+}
+
+#cat_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 0.5rem;
+    margin-bottom: 150px;
+}
+
+#All, #Art, #Music,#Kooso
+{
+    padding: 7px 13px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+#All:hover, #Art:hover, #Music:hover, #Kooso:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+/* Card Area */
+#NFTOverview {
+    display: grid;
+    /* 一行 5 部電影：(5, 19%)、一行 6 部電影：(6, 15%) */
+    grid-template-columns: repeat(6, 15%); 
+    justify-content: center;
+}
+
+.NFTCard {
+    position: relative;
+    border-radius: 10px;
+    /* width 設定：5 部 270px、6 部 230px */
+    width: 230px;
+    height: 460px;
+    margin: 20px 10px 10px 10px;
+    top: 0;
+    place-self: center;
+}
+
+/* Information in Card */
+.NFTCard img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.NFTInfo {
+    padding: 0 10px 0 10px;
+}
+
+.chinese-name {
+    font-size: 1.125rem;
+}
+
+.english-name {
+    font-size: 1rem;
+    color: #C0372C;
+}
+
+/* NFT Detail Show Area */
+#NFTContent {
+    display: none;
+    background: linear-gradient(45deg,#312d2d,#D3A4FF);
+    color: var(--text-color);
+    position: fixed;
+    top: 60px;
+    max-width: 100%;
+    width: 100%;
+    height: 92%;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+}
+
+/* Close button */
+#close {
+    display: flex;
+    float: right;
+    margin: 6px 6px 6px 13px;
+    cursor: pointer;
+}
+
+#close p {
+    font-size: 1.25rem;
+    padding: 0 13px 0 13px;
+}
+
+#close:hover {
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+}
+
+#close:active {
+    background-color: darkred;
+}
+
+/* Movie poster setting */
+#poster img {
+    display: flex;
+    float: left;
+    max-width: 25%;
+    padding: 30px 0 0 30px;
+}
+
+/* Movie Detail Text setting */
+#textArea {
+    position: fixed;
+    left: 25%;
+    padding: 40px 0 0 30px;
+    width: 70%;
+    font-size: 1.125rem;
+    overflow-y: auto;
+}
+
+.chineseName p {
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+.englishName p {
+    font-size: 1.25rem;
+}
+
+#desc {
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+
+
